@@ -17,7 +17,7 @@ class MeetupApi {
   async fetchGroupMeetups() {
     const { data } = await axiso.get(this.path);
 
-    // console.log(data.meetups);
+    console.log(data.meetups);
     return data.meetups;
   }
 }

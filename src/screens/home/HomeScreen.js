@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { MeetupApi } from '../../../constants/api';
 import { LoadingScreen } from '../../commons';
+import { MyMeetupList } from './components';
 import styles from './styles/HomeScreen';
 
 const meetupApi = new MeetupApi();
@@ -35,7 +36,7 @@ class HomeScreen extends Component {
           <Text>HomeScreen</Text>
         </View>
         <View style={styles.bottomContainer}>
-
+          <MyMeetupList meetups={this.state.meetups} />
         </View>
       </View>
     );
